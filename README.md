@@ -42,7 +42,6 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-  - [🎥 Video](#video)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -83,8 +82,6 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-- **Navbar**
-- **Mobile responsive**
 - **ES6 syntax**
 - **Use Separate Modules**
 - **DOM manipulation**
@@ -100,16 +97,6 @@ After you're finished please remove all the comments and instructions!
 <!-- > Add a link to your deployed project. -->
 
 - <a href="#">Live Demo</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- Video -->
-
-## 🎥 Video <a name="video"></a>
-
-<!-- > Add a link to your video project. -->
-
-Coming soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,6 +229,8 @@ Example:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
+
+- **Make the tasks draggable**
 
 <!-- > Mention future features. -->
 
