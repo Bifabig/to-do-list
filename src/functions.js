@@ -1,8 +1,14 @@
-/* eslint-disable no-use-before-define */
 import { getToDoList, toDoList } from './storage.js';
 import checkBoxHandler from './checkBoxHandler.js';
 
 let myList = getToDoList();
+
+export const editTask = (id, desc) => {
+  const task = myList.find((task) => task.id === id);
+  task.desc = desc.trim();
+
+  toDoList(myList);
+};
 
 const editInput = () => {
   const input = document.querySelectorAll('.input-field');
@@ -23,23 +29,6 @@ const editInput = () => {
   });
 };
 
-export const editTask = (id, desc) => {
-  const task = myList.find((task) => task.id === id);
-  task.desc = desc.trim();
-
-  toDoList(myList);
-};
-
-const deleteHandler = () => {
-  const removeBtns = document.querySelectorAll('.uil');
-  removeBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      removeTodo(+btn.id);
-      renderTodos();
-    });
-  });
-};
-
 export const addTodo = (desc) => {
   myList.push({ id: myList.length + 1, desc: desc.trim(), completed: false });
   toDoList(myList);
@@ -54,12 +43,6 @@ export const removeTodo = (id) => {
   });
 
   toDoList(myList);
-};
-
-export const deleteAll = () => {
-  myList = myList.filter((todo) => !todo.completed);
-  toDoList(myList);
-  renderTodos();
 };
 
 export const renderTodos = () => {
@@ -86,6 +69,19 @@ export const renderTodos = () => {
   }
 
   editInput();
-  deleteHandler();
+  const removeBtns = document.querySelectorAll('.uil');
+  removeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      removeTodo(+btn.id);
+      renderTodos();
+    });
+  });
+
   checkBoxHandler(myList);
+};
+
+export const deleteAll = () => {
+  myList = myList.filter((todo) => !todo.completed);
+  toDoList(myList);
+  renderTodos();
 };
