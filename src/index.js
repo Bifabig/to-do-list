@@ -9,8 +9,4 @@ document.querySelector('.text-input').addEventListener('keypress', (e) => {
   }
 });
 
-// document.querySelector('.clear-btn').addEventListener('click', () => {
-//   deleteAll();
-// });
-
 renderTodos();
