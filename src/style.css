@@ -1,0 +1,104 @@
+body {
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+  box-shadow: 0 0 5px #787878;
+  overflow: hidden;
+}
+
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+}
+
+li:last-child {
+  border-bottom: transparent;
+}
+
+.text-input {
+  padding: 6px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.text-input::placeholder {
+  font-style: italic;
+}
+
+.text-input,
+.text-input:focus {
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.clear {
+  text-align: center;
+  background-color: #dddddd9c;
+  cursor: pointer;
+}
+
+.clear a {
+  text-decoration: none;
+  color: #787878;
+}
+
+.clear a:hover {
+  text-decoration: underline;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.option-btn {
+  font-size: 24px;
+}
+
+i {
+  width: 20px;
+  font-size: 18px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #fffeca;
+}
+
+.hide {
+  display: none;
+}
+
+.crossout {
+  text-decoration: line-through;
+  color: #787878;
+}
