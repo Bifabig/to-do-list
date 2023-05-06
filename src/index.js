@@ -1,9 +1,9 @@
 import './style.css';
-import { renderTodos } from './functions.js';
+import { addTodo, renderTodos } from './functions.js';
 
 document.querySelector('.text-input').addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
-    // addTodo(e.target.value);
+    addTodo(e.target.value);
     renderTodos();
     e.target.value = '';
   }
