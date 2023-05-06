@@ -1,5 +1,5 @@
 import './style.css';
-import { addTodo, renderTodos } from './functions.js';
+import { addTodo, deleteAll, renderTodos } from './functions.js';
 
 document.querySelector('.text-input').addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
@@ -9,8 +9,8 @@ document.querySelector('.text-input').addEventListener('keypress', (e) => {
   }
 });
 
-// document.querySelector('.clear-btn').addEventListener('click', () => {
-//   deleteAll();
-// });
+document.querySelector('.clear-btn').addEventListener('click', () => {
+  deleteAll();
+});
 
 renderTodos();
