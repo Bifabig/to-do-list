@@ -59,7 +59,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Personal Portfolio <a name="about-project"></a>
+# 📖 To Do List <a name="about-project"></a>
 
 <!-- > Describe your project in 1 or 2 sentences. -->
 
@@ -99,7 +99,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Add a link to your deployed project. -->
 
-- <a href="https://bifabig.github.io/awesome-books/">Live Demo</a>
+- <a href="#">Live Demo</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,10 +245,6 @@ Example:
 
 <!-- > Mention future features. -->
 
-- **Navigation to new book added**
-- **Empty list prompt**
-- **Better styling**
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -256,12 +252,6 @@ Example:
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-
-👤 **Abdelaziz Soliman**
-
-- GitHub: [@abdelazizsoliman](https://github.com/abdelazizsoliman)
-- Twitter: [@Abdelaz21958317](https://twitter.com/Abdelaz21958317)
-- LinkedIn: [Abdelaziz Soliman](https://www.linkedin.com/in/abdelaziz-soliman-16989b89/)
 
 Feel free to check the [issues page](../../issues/).
 
