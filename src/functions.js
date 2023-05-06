@@ -1,8 +1,15 @@
 /* eslint-disable no-use-before-define */
-import { getToDoList, toDoList } from './storage.js';
+import { toDoList } from './storage.js';
 import checkBoxHandler from './checkBoxHandler.js';
 
-let myList = getToDoList();
+// let myList = getToDoList();
+
+let myList = [
+  { id: 1, desc: 'wake up', completed: false },
+  { id: 2, desc: 'home work', completed: false },
+  { id: 3, desc: 'got to school', completed: false },
+  { id: 4, desc: 'buy groceries', completed: false },
+];
 
 const editInput = () => {
   const input = document.querySelectorAll('.input-field');
