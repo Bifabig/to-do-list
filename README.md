@@ -72,7 +72,7 @@
 
 <!-- > Add a link to your deployed project. -->
 
-- <a href="#">Live Demo</a>
+- <a href="https://bifabig.github.io/to-do-list/">Live Demo</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,17 +107,8 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Bifabig/awesome-books.git
+  git clone https://github.com/Bifabig/to-do-list.git
 ```
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 ### Install
 
@@ -127,28 +118,11 @@ Run this command inside the cloned repository
 npm install
 ```
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
 ### Usage
 
 To run the project, execute the following command:
 
 Open the index.html file in your browser
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
 
 ### Run tests
 
@@ -165,14 +139,6 @@ For JavaScript
 ```sh
   npx eslint .
 ```
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 ### Deployment
 
