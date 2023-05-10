@@ -135,7 +135,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _functions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions.js */ \"./src/functions.js\");\n\r\n\r\n\r\ndocument.querySelector('.text-input').addEventListener('keypress', (e) => {\r\n  if (e.key === 'Enter') {\r\n    (0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.addTodo)(e.target.value);\r\n    (0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.renderTodos)();\r\n    e.target.value = '';\r\n  }\r\n});\r\n\r\ndocument.querySelector('.clear-btn').addEventListener('click', () => {\r\n  (0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.deleteAll)();\r\n});\r\n\r\n(0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.renderTodos)();\r\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _functions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions.js */ \"./src/functions.js\");\n\n\n\ndocument.querySelector('.text-input').addEventListener('keypress', (input) => {\n  if (input.key === 'Enter') {\n    (0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.addTodo)(input.target.value);\n    (0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.renderTodos)();\n    input.target.value = '';\n  }\n});\n\ndocument.querySelector('.clear-btn').addEventListener('click', () => {\n  (0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.deleteAll)();\n});\n\n(0,_functions_js__WEBPACK_IMPORTED_MODULE_1__.renderTodos)();\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ }),
 
@@ -145,7 +145,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getToDoList\": () => (/* binding */ getToDoList),\n/* harmony export */   \"toDoList\": () => (/* binding */ toDoList)\n/* harmony export */ });\nconst toDoList = (list) => localStorage.setItem('toDoList', JSON.stringify(list));\r\n\r\nconst getToDoList = () => {\r\n  let previousList = JSON.parse(localStorage.getItem('toDoList'));\r\n  if (!previousList) {\r\n    previousList = [];\r\n  }\r\n  return previousList;\r\n};\r\n\n\n//# sourceURL=webpack://to-do-list/./src/storage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getToDoList\": () => (/* binding */ getToDoList),\n/* harmony export */   \"toDoList\": () => (/* binding */ toDoList)\n/* harmony export */ });\nconst toDoList = (list) => localStorage.setItem('toDoList', JSON.stringify(list));\n\nconst getToDoList = () => {\n  const previousList = JSON.parse(localStorage.getItem('toDoList')) || [];\n  return previousList;\n};\n\n\n//# sourceURL=webpack://to-do-list/./src/storage.js?");
 
 /***/ })
 
