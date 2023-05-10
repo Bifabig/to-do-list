@@ -1,11 +1,11 @@
 import './style.css';
 import { addTodo, deleteAll, renderTodos } from './functions.js';
 
-document.querySelector('.text-input').addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    addTodo(e.target.value);
+document.querySelector('.text-input').addEventListener('keypress', (input) => {
+  if (input.key === 'Enter') {
+    addTodo(input.target.value);
     renderTodos();
-    e.target.value = '';
+    input.target.value = '';
   }
 });
 
