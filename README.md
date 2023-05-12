@@ -168,6 +168,12 @@ Example:
 - Twitter: [@biftu94](https://twitter.com/biftu94)
 - LinkedIn: [Biftu Girma](https://www.linkedin.com/in/biftu-girma-3598a8126/)
 
+👤 **Nilab Khwajazada**
+
+- GitHub: [@nilab-khwaja](https://github.com/nilab-khwaja)
+- Twitter: [@Nilab_Khwajazada](https://twitter.com/Nilab_khwajazada)
+- LinkedIn: [Nilab Khwajazada](https://www.linkedin.com/in/Nilab-Khwajazada/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
