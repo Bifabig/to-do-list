@@ -1,4 +1,4 @@
-const { toDoList, getToDoList } = require('./storage.js');
+const { toDoList } = require('./storage.js');
 
 let myList = [];
 
@@ -21,7 +21,7 @@ const removeTodo = (id) => {
 };
 
 const renderTodos = () => {
-  myList = getToDoList();
+  myList = addTodo('hi');
   document.body.innerHTML = `<div class="container">
   <ul>
       <li>
@@ -56,4 +56,8 @@ const renderTodos = () => {
   return document.body.innerHTML;
 };
 
-module.exports = { addTodo, removeTodo, renderTodos };
+module.exports = {
+  addTodo,
+  removeTodo,
+  renderTodos,
+};
