@@ -1,4 +1,4 @@
-import { toDoList } from './storage.js';
+const { toDoList } = require('./storage.js');
 
 const checkBoxHandler = (list) => {
   const checked = document.querySelectorAll('.check-btn');
@@ -22,4 +22,4 @@ const checkBoxHandler = (list) => {
   });
 };
 
-export default checkBoxHandler;
+module.exports = { checkBoxHandler };
