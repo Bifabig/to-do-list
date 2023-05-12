@@ -1,5 +1,5 @@
-import './style.css';
-import { addTodo, deleteAll, renderTodos } from './functions.js';
+const { addTodo, deleteAll, renderTodos } = require('./functions.js');
+require('./style.css');
 
 document.querySelector('.text-input').addEventListener('keypress', (input) => {
   if (input.key === 'Enter') {

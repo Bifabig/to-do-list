@@ -1,9 +1,9 @@
-import { getToDoList, toDoList } from './storage.js';
-import checkBoxHandler from './checkBoxHandler.js';
+const { getToDoList, toDoList } = require('./storage.js');
+const { checkBoxHandler } = require('./checkBoxHandler.js');
 
 let myList = getToDoList();
 
-export const editTask = (id, desc) => {
+const editTask = (id, desc) => {
   const task = myList.find((task) => task.id === id);
   task.desc = desc.trim();
 
@@ -29,12 +29,14 @@ const editInput = () => {
   });
 };
 
-export const addTodo = (desc) => {
-  myList.push({ id: myList.length + 1, desc: desc.trim(), completed: false });
+const addTodo = (desc) => {
+  if (desc !== '') {
+    myList.push({ id: myList.length + 1, desc: desc.trim(), completed: false });
+  }
   toDoList(myList);
 };
 
-export const removeTodo = (id) => {
+const removeTodo = (id) => {
   const i = myList.findIndex((todo) => todo.id === id);
   if (i > -1) myList.splice(i, 1);
 
@@ -45,7 +47,7 @@ export const removeTodo = (id) => {
   toDoList(myList);
 };
 
-export const renderTodos = () => {
+const renderTodos = () => {
   document.querySelector('.list').innerHTML = '';
   if (myList) {
     myList.forEach((todo) => {
@@ -80,8 +82,16 @@ export const renderTodos = () => {
   checkBoxHandler(myList);
 };
 
-export const deleteAll = () => {
+const deleteAll = () => {
   myList = myList.filter((todo) => !todo.completed);
   toDoList(myList);
   renderTodos();
+};
+
+module.exports = {
+  editTask,
+  addTodo,
+  removeTodo,
+  renderTodos,
+  deleteAll,
 };

@@ -1,6 +1,8 @@
-export const toDoList = (list) => localStorage.setItem('toDoList', JSON.stringify(list));
+const toDoList = (list) => localStorage.setItem('toDoList', JSON.stringify(list));
 
-export const getToDoList = () => {
+const getToDoList = () => {
   const previousList = JSON.parse(localStorage.getItem('toDoList')) || [];
   return previousList;
 };
+
+module.exports = { toDoList, getToDoList };
