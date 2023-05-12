@@ -37,17 +37,21 @@ const renderTodos = () => {
   document.querySelector('.list').innerHTML = '';
   if (myList) {
     myList.forEach((todo) => {
-      const inputEl = `<input class="text-input input-field input-${todo.id}" 
-      id='${todo.id}' value='${todo.desc}'></input>`;
+      let inputEl;
+      if (todo.completed) {
+        inputEl = `<input class="text-input input-field input-${todo.id} crossout" id='${todo.id}' value='${todo.desc}'></input> `;
+      } else {
+        inputEl = `<input class="text-input input-field input-${todo.id}" id='${todo.id}' value='${todo.desc}'></input> `;
+      }
 
       const todoEl = `<li class="todo">
-        <div> 
-        <input class="check-btn" 
-        id='${todo.id}' type="checkbox"> 
-        ${inputEl}
-        </div>
-        <i id="${todo.id}"class="uil uil-trash"></i>
-        </li>`;
+      <div> 
+      <input class="check-btn" id='${todo.id}' 
+      ${todo.completed ? 'checked' : ''}  type="checkbox"> 
+      ${inputEl}
+      </div>
+      <i id="${todo.id}"class="uil uil-trash"></i>
+      </li>`;
 
       document.querySelector('.list').innerHTML += todoEl;
     });
@@ -56,8 +60,35 @@ const renderTodos = () => {
   return document.body.innerHTML;
 };
 
+const editTask = (id, desc) => {
+  const task = myList.find((task) => task.id === id);
+  task.desc = desc.trim();
+
+  toDoList(myList);
+  return task;
+};
+
+const editInput = () => {
+  renderTodos();
+};
+
+const checkBoxHandler = () => {
+  myList[0].completed = 'true';
+
+  return myList;
+};
+
+const deleteAll = () => {
+  myList = myList.filter((todo) => !todo.completed);
+  return myList;
+};
+
 module.exports = {
   addTodo,
   removeTodo,
   renderTodos,
+  editInput,
+  editTask,
+  checkBoxHandler,
+  deleteAll,
 };
